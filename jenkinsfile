@@ -12,6 +12,6 @@ pipeline {
             steps {
                 bat 'java helloworld'
             }
-        }
+        }git branch: 'main', credentialsId: '72fe60cb-9c7f-47fc-9c6e-a850cf61ffb7', url: 'https://github.com/tanmayjoshi01/JAVAPipeline.git'
     }
 }
