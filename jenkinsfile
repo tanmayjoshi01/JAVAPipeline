@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('clone') {
+            steps {
+               git branch: 'main', credentialsId: '65178642-3df5-482c-ba09-29d01a6ec9f0', url: 'https://github.com/tanmayjoshi01/JAVAPipeline.git'
+            }
+        }
+
+
+
+        stage('Compile') {
+            steps {
+               bat 'javac helloworld.java'
+            }
+        }
+       stage('Run'){
+          steps{
+          bat 'java helloworld.java'
+         }
+       }
+    }
+}
